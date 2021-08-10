@@ -8,4 +8,15 @@
 включительно.
 """
 
+from random import randint
 
+ll_int = int(input('Введите нижнюю границу целого числа: '))
+hl_int = int(input('Введите верхнюю границу целого числа: '))
+ll_float = float(input('Введите нижнюю границу вещественного числа: '))
+hl_float = float(input('Введите верхнюю границу вещественного числа: '))
+ll_char = ord(input('Введите нижнюю границу символьной переменной: '))
+hl_char = ord(input('Введите верхнюю границу символьной переменной: '))
+
+print(randint(ll_int, hl_int))
+print(randint(ll_float * 1000, hl_float * 1000)/1000)
+print(chr(randint(ll_char, hl_char)))
