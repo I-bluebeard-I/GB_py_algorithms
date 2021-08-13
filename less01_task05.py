@@ -6,22 +6,23 @@
 alphabet_en = 'abcdefghijklmnopqrstuvwxyz'
 alphabet_ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
-alpha_1 = input('').lower()
-alpha_2 = input('').lower()
+alpha_1 = input('Введите первую букву: ').lower()
+alpha_2 = input('Введите вторую букву: ').lower()
 
 
 try:
     if alphabet_ru.index(alpha_1) != ValueError:
-        a1 = alphabet_ru.index(alpha_1) + 1
-        a2 = alphabet_ru.index(alpha_2) + 1
+        idx_alpha_1 = alphabet_ru.index(alpha_1) + 1
+        idx_alpha_2 = alphabet_ru.index(alpha_2) + 1
 except ValueError:
     try:
         if alphabet_en.index(alpha_1) != ValueError:
-            a1 = alphabet_en.index(alpha_1) + 1
-            a2 = alphabet_en.index(alpha_2) + 1
+            idx_alpha_1 = alphabet_en.index(alpha_1) + 1
+            idx_alpha_2 = alphabet_en.index(alpha_2) + 1
     except ValueError:
-        pass
+        print('Введенные символы находятся за пределами RU-EN алфавита')
+        exit(0)
 
-print(a1)
-print(a2)
-print(a2 - a1)
+print(f'\nПорядковый номер буквы "{alpha_1}" в алфавите: {idx_alpha_1}')
+print(f'Порядковый номер буквы "{alpha_2}" в алфавите: {idx_alpha_2}')
+print(f'Между буквами "{alpha_1}" и "{alpha_2}" находится {idx_alpha_2 - idx_alpha_1 - 1} буква(ы)')
