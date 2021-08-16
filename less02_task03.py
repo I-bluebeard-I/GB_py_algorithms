@@ -4,3 +4,10 @@
 """
 
 
+num = input('Введите число: ')
+new_str = ''
+
+for n in num:
+    new_str = n + new_str
+
+print(f'Обратное число по порядку входящих в него цифр: {new_str}')

@@ -4,3 +4,21 @@
 """
 
 
+n = input('Введите число: ')
+
+if n.replace('-', '').isdigit():
+    n = int(n)
+    i = 0
+    n_sum = 0
+
+    while i <= n:
+        n_sum += i
+        i += 1
+
+    if n_sum == n * (n + 1) / 2:
+        print(f'is True')
+    else:
+        print(f'is False')
+
+else:
+    print(f'"{n}" не является числом')

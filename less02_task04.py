@@ -3,3 +3,16 @@
 """
 
 
+n = int(input('Введите количество элементов: '))
+a = [1]
+n_summ = 0
+
+if n > 0:
+    n_summ = a[0]
+    count = 0
+    while count < n-1:
+        a.append(a[count] / -2)
+        count += 1
+    print(a)
+
+print(f'Сумма ряда = {sum(a)}')

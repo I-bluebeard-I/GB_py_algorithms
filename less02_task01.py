@@ -8,3 +8,30 @@
 """
 
 
+avail_sign = '0+-*/'
+num = [None, None]
+sign = ''
+
+while sign != '0':
+
+    for count in range(2):
+        while True:
+            num[count] = input(f'Введите число {count + 1}: ')
+            if num[count].replace('-', '').isdigit():
+                break
+            else:
+                print(f'"{num[count]}" не является числом, повторите ввод')
+
+    while True:
+        sign = input('Введите мат знак (+, -, *, /) или "0" для выходя из программы: ')
+        if avail_sign.find(sign) == -1:
+            print(f'"{sign}" не соответствут условию ввода, повторите ввод')
+        else:
+            if sign == '0':
+                exit(0)
+            elif sign == '/':
+                if int(num[1]) == 0:
+                    print('Делитель не может быть равен нулю')
+                    break
+            exec(f'print({num[0]} {sign} {num[1]})')
+            break

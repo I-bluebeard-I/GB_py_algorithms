@@ -4,3 +4,15 @@
 """
 
 
+string = input('Введите число: ')
+symbol = input('Введите цифру: ')
+
+# вариант 1
+print(f'Цифра "{symbol}" повторяется в последовательности "{string}" {string.count(symbol)} раз(а)')
+
+# вариант 2
+count = 0
+for s in string:
+    if s == symbol:
+        count += 1
+print(f'Цифра "{symbol}" повторяется в последовательности "{string}" {count} раз(а)')
