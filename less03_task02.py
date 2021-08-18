@@ -5,3 +5,12 @@
 """
 
 
+a = [8, 3, 15, 6, 4, 2]
+b = []
+
+for n in range(len(a)):
+    if a[n] % 2 == 0:
+        b.append(n)
+
+print(f'{a = }')
+print(f'{b = }')

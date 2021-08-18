@@ -4,3 +4,14 @@
 """
 
 
+from random import randint
+
+a = [randint(-2, 50) for n in range(0, 20)]
+
+b = sorted(a)
+min_idx = a.index(min(b))
+min2_idx = a.index(b[b.index(min(b)) + 1])
+
+print(f'Исходный список: {a}')
+print(f'Два минимальных элемента в списке: {b[0:2]}')
+print(f'idx минимальных элементов в исходном списке = {min_idx}, {min2_idx}')

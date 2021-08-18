@@ -3,3 +3,8 @@
 """
 
 
+a = [n for n in range(2, 99 + 1)]
+
+for n in range(2, 9 + 1):
+    b = list(filter(lambda x: x % n == 0, a))
+    print(f'Кратно "{n}" - {len(b)} элементов - {b}')
