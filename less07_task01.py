@@ -5,3 +5,21 @@
 """
 
 
+from random import randint
+
+
+def func_srt(ary):
+    i = 0
+    while i < len(ary):
+        for j in range(len(ary) - (i + 1)):
+            if ary[j] < ary[j + 1]:
+                ary[j], ary[j + 1] = ary[j + 1], ary[j]
+        i += 1
+    return ary
+
+
+a = []
+for i in range(10):
+    a.append(randint(-100, 100))
+print(f'Массив до сортировки: {chr(9)*2}{a}')
+print(f'Массив после сортировки: {chr(9)}{func_srt(a)}')
